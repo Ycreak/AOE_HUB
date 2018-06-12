@@ -1,0 +1,462 @@
+<html><head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <title>AOE Navigation</title>
+	<link rel="shortcut icon" href="./pictures/Logo.png">
+        <!-- Bootstrap Core CSS - Uses Bootswatch Flatly
+        Theme: http://bootswatch.com/flatly/ -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <!-- Custom CSS -->
+        <link href="css/freelancer.css" rel="stylesheet">
+        <!-- Custom Fonts -->
+        <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+        <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media
+        queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file://
+        -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <style>
+  .carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      width: 70%;
+      margin: auto;
+  }
+  </style>
+
+    </head>
+    <body id="page-top" class="index">
+        <!-- Portfolio Grid Section -->
+        <section id="portfolio">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h2>AGE OF EMPIRES SIDE BAR</h2>
+                    </div>
+                </div> <br> <br>
+                
+                <div class="row">
+                    <div class="col-sm-4 portfolio-item">
+                        <a href="http://www.aoczone.net" class="portfolio-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <i class="fa fa-search-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="pictures/aocZone.png" class="img-responsive" alt="">
+                    </a>
+                    </div>
+                    <div class="col-sm-4 portfolio-item">
+                        <a href="https://www.reddit.com/r/aoe2/" class="portfolio-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <i class="fa fa-search-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="pictures/reddit.png" class="img-responsive" alt="">
+                    </a>
+                    </div>
+                    <div class="col-sm-4 portfolio-item">
+                        <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <i class="fa fa-search-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="pictures/voobly.png" class="img-responsive" alt="">
+                    </a>
+                    </div>
+                </div>
+
+		<div class="row">
+                    <div class="col-sm-2 portfolio-item">
+                        <a href="http://escape.gg/" class="portfolio-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <i class="fa fa-search-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="pictures/escape.png" class="img-responsive" alt="">
+                    </a>
+                    </div>
+                    <div class="col-sm-2 portfolio-item">
+                        <a href="http://aoe2hd.info/" class="portfolio-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <i class="fa fa-search-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="pictures/aoe2HDinfo.png" class="img-responsive" alt="">
+                    </a>
+                    </div>
+                    <div class="col-sm-2 portfolio-item">
+                        <a href="http://aok.heavengames.com/" class="portfolio-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <i class="fa fa-search-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="pictures/aokH.png" class="img-responsive" alt="">
+                    </a>
+                    </div>
+                    <div class="col-sm-2 portfolio-item">
+                        <a href="../macOS.html" class="portfolio-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <i class="fa fa-search-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="pictures/macOS2.png" class="img-responsive" alt="">
+                    </a>
+                    </div>
+                    <div class="col-sm-2 portfolio-item">
+                        <a href="http://www.voobly.com/forum/thread/217821" class="portfolio-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <i class="fa fa-search-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="pictures/linux.png" class="img-responsive" alt="">
+                    </a>
+                    </div>
+                    <div class="col-sm-2 portfolio-item">
+                        <a href="https://aoe2calendar.com/" class="portfolio-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <i class="fa fa-search-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="pictures/calendar.png" class="img-responsive" alt="">
+                    </a>
+                    </div>
+
+                <div class="row">
+                    <div class="col-sm-2 portfolio-item">
+                        <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <i class="fa fa-search-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="pictures/twitch.png" class="img-responsive" alt="">
+                    </a>
+                    </div>
+                    <div class="col-sm-2 portfolio-item">
+                        <a href="https://docs.google.com/document/d/17UWT2mRARVHz86hKYEnhexyjbhBYhQzJ9l2Vty7CKFc/" class="portfolio-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <i class="fa fa-search-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="pictures/started.png" class="img-responsive" alt="">
+                    </a>
+                    </div>
+                    <div class="col-sm-2 portfolio-item">
+                        <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <i class="fa fa-search-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="pictures/youtube.png" class="img-responsive" alt="">
+                    </a>
+                    </div>
+                    <div class="col-sm-2 portfolio-item">
+                        <a href="https://aokhotkeys.appspot.com/" class="portfolio-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <i class="fa fa-search-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="pictures/hotkey.png" class="img-responsive" alt="">
+                    </a>
+                    </div>
+                    <div class="col-sm-2 portfolio-item">
+                        <a href="http://aoe2.net/" class="portfolio-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <i class="fa fa-search-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="pictures/aoe2net.png" class="img-responsive" alt="">
+                    </a>
+                    </div>
+                    <div class="col-sm-2 portfolio-item">
+                        <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <i class="fa fa-search-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="pictures/placeholder.jpg" class="img-responsive" alt="">
+                    </a>
+                    </div>
+
+                <div class="row">
+                    <div class="col-sm-2 portfolio-item">
+                        <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <i class="fa fa-search-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="pictures/placeholder.jpg" class="img-responsive" alt="">
+                    </a>
+                    </div>
+                    <div class="col-sm-2 portfolio-item">
+                        <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <i class="fa fa-search-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="pictures/placeholder.jpg" class="img-responsive" alt="">
+                    </a>
+                    </div>
+                    <div class="col-sm-2 portfolio-item">
+                        <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <i class="fa fa-search-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="pictures/placeholder.jpg" class="img-responsive" alt="">
+                    </a>
+                    </div>
+                    <div class="col-sm-2 portfolio-item">
+                        <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <i class="fa fa-search-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="pictures/placeholder.jpg" class="img-responsive" alt="">
+                    </a>
+                    </div>
+                    <div class="col-sm-2 portfolio-item">
+                        <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <i class="fa fa-search-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="pictures/placeholder.jpg" class="img-responsive" alt="">
+                    </a>
+                    </div>
+                    <div class="col-sm-2 portfolio-item">
+                        <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <i class="fa fa-search-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="pictures/placeholder.jpg" class="img-responsive" alt="">
+                    </a>
+                    </div>
+
+
+
+                </div>
+                <div class="row">
+                    <div class="col-sm-4 portfolio-item">
+                        <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <i class="fa fa-search-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="pictures/placeholder.jpg" class="img-responsive" alt="">
+                    </a>
+                    </div>
+                    <div class="col-sm-4 portfolio-item">
+                        <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <i class="fa fa-search-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="pictures/placeholder.jpg" class="img-responsive" alt="">
+                    </a>
+                    </div>
+                    <div class="col-sm-4 portfolio-item">
+                        <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <i class="fa fa-search-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="pictures/placeholder.jpg" class="img-responsive" alt="">
+                    </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Project Section -->
+        <section id="project">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h2>AOE Projects</h2> <br> <br>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-sm-2 portfolio-item">
+                        <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
+                        <img src="pictures/translate.png" class="img-responsive" alt="">
+                    </a>
+                    </div>
+                    <div class="col-sm-2 portfolio-item">
+                        <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
+                        <img src="pictures/placeholder.jpg" class="img-responsive" alt="">
+                    </a>
+                    </div>
+                    <div class="col-sm-2 portfolio-item">
+                        <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
+                        <img src="pictures/placeholder.jpg" class="img-responsive" alt="">
+                    </a>
+                    </div>
+                    <div class="col-sm-2 portfolio-item">
+                        <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
+                        <img src="pictures/placeholder.jpg" class="img-responsive" alt="">
+                    </a>
+                    </div>
+                    <div class="col-sm-2 portfolio-item">
+                        <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
+                        <img src="pictures/placeholder.jpg" class="img-responsive" alt="">
+                    </a>
+                    </div>
+                    <div class="col-sm-2 portfolio-item">
+                        <a href="https://github.com/SFTtech/openage" class="portfolio-link" data-toggle="modal">
+                        <img src="pictures/openage.png" class="img-responsive" alt="">
+                    </a>
+                    </div>
+	</section>
+
+        <!-- Casters Section -->
+        <section id="caster">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h2>AOE Casters</h2> <br> <br>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-sm-2 portfolio-item">
+                        <a href="https://www.youtube.com/user/Resonance22Channel" class="portfolio-link" data-toggle="modal">
+                        <img src="pictures/resonance.png" class="img-responsive" alt="">
+                    </a>
+                    </div>
+                    <div class="col-sm-2 portfolio-item">
+                        <a href="https://www.youtube.com/user/ZeroEmpires" class="portfolio-link" data-toggle="modal">
+                        <img src="pictures/zero.png" class="img-responsive" alt="">
+                    </a>
+                    </div>
+                    <div class="col-sm-2 portfolio-item">
+                        <a href="https://www.youtube.com/t90official" class="portfolio-link" data-toggle="modal">
+                        <img src="pictures/t90.png" class="img-responsive" alt="">
+                    </a>
+                    </div>
+                    <div class="col-sm-2 portfolio-item">
+                        <a href="https://www.youtube.com/user/FoptMembrillo" class="portfolio-link" data-toggle="modal">
+                        <img src="pictures/memb.png" class="img-responsive" alt="">
+                    </a>
+                    </div>
+                    <div class="col-sm-2 portfolio-item">
+                        <a href="https://www.youtube.com/channel/UChzLZJo-SxuPHz-oYKAIC_g" class="portfolio-link" data-toggle="modal">
+                        <img src="pictures/sotl.png" class="img-responsive" alt="">
+                    </a>
+                    </div>
+                    <div class="col-sm-2 portfolio-item">
+                        <a href="https://www.youtube.com/user/BBQTurkman" class="portfolio-link" data-toggle="modal">
+                        <img src="pictures/bbq.png" class="img-responsive" alt="">
+                    </a>
+                    </div>
+	</section>
+
+
+<!-- Footer -->
+        <footer class="text-center">
+            <div class="footer-above">
+                <div class="container">
+                    <div class="row">
+                        <div class="footer-col col-md-4">
+                            <h3>Contact</h3>
+                            <p>E-mail:&nbsp;y.creak@hotmail.com
+                                <br>Website: nolden.biz
+                                <br>
+                                <br>
+                            </p>
+                        </div>
+                        <div class="footer-col col-md-4">
+                            <h3>Around the Web</h3>
+                            <ul class="list-inline">
+                                <li>
+                                    <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-google-plus"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-linkedin"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-dribbble"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer-col col-md-4">
+                            <h3>About AOE Sidebar</h3>
+                            <p>Just a project.
+                                <br>AOE 4 life. &nbsp;</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-below">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">Copyright © Ycreak 2017</div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Scroll to Top Button (Only visible on small and extra-small screen
+        sizes) -->
+        <div class="scroll-top page-scroll visible-xs visible-sm">
+            <a class="btn btn-primary" href="#page-top">
+            <i class="fa fa-chevron-up"></i>
+        </a>
+        </div>
+        <!-- jQuery -->
+        <script src="js/jquery.js"></script>
+        <!-- Bootstrap Core JavaScript -->
+        <script src="js/bootstrap.min.js"></script>
+        <!-- Plugin JavaScript -->
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+        <script src="js/classie.js"></script>
+        <script src="js/cbpAnimatedHeader.js"></script>
+        <!-- Contact Form JavaScript -->
+        <script src="js/jqBootstrapValidation.js"></script>
+        <script src="js/contact_me.js"></script>
+        <!-- Custom Theme JavaScript -->
+        <script src="js/freelancer.js"></script>
+    
+
+</body></html>
