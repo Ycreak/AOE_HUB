@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://www.w3schools.com/lib/w3.js"></script>
+
+
+
+  <link rel="stylesheet" href="styles.css">
+  <!-- <link rel="stylesheet" href="modals.css"> -->
+  <link rel="shortcut icon" href="./pictures/Logo.png">
+
+  <!-- Has to stay on this position to be on top! -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+
+  <title>AOE2 Hub</title>
+
+
+  
+</head>
+
+
+<body>
+
+<script>
+  createTitle();
+  createGrid("json/general.json", "");
+  createGrid("json/websites.json", "Great AOE2 Websites, Tools and Reading Material");
+  createGrid("json/casters.json", "Casters & Content Creators");
+  
+  //createGrid("json/projects.json", "Ongoing Projects");
+  createGrid("json/projects.json", "Ongoing Projects");
+
+  // createGrid("json/projects.json");
+
+  function includeHTML() {
+    var z, i, elmnt, file, xhttp;
+    /*loop through a collection of all HTML elements:*/
+    z = document.getElementsByTagName("*");
+    for (i = 0; i < z.length; i++) {
+      elmnt = z[i];
+      /*search for elements with a certain atrribute:*/
+      file = elmnt.getAttribute("w3-include-html");
+      if (file) {
+        /*make an HTTP request using the attribute value as the file name:*/
+        xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+          if (this.readyState == 4) {
+            if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+            if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+            /*remove the attribute, and call this function once more:*/
+            elmnt.removeAttribute("w3-include-html");
+            includeHTML();
+          }
+        }      
+        xhttp.open("GET", file, true);
+        xhttp.send();
+        /*exit the function:*/
+        return;
+      }
+    }
+  };
+
+  function createTitle(){
+    var titleDiv = document.createElement("DIV");
+    titleDiv.setAttribute("class", "container-fluid");
+    var title = document.createElement("H1");
+    var text1 = document.createTextNode("AOE2 HUB");
+
+    var subTitle = document.createElement("H2");
+    var text2 = document.createTextNode("Everything AOE2 related in one place!");
+
+    title.appendChild(text1);
+    subTitle.appendChild(text2);
+    titleDiv.appendChild(title);
+    titleDiv.appendChild(subTitle);  
+
+    document.body.appendChild(titleDiv);    
+
+  }
+
+  /* Creation of the picture grid using mydata.json
+   * Uses a container-fluid with rows consisting of
+   * six pictures, made of the a element for links.
+   */
+  function createGrid(jsonFile, title){
+
+    var rowDiv = document.createElement("DIV");
+    rowDiv.setAttribute("class", "row");
+
+    var masterDiv = document.createElement("DIV");
+    masterDiv.setAttribute("class", "container-fluid");
+    
+    var gridTitle = document.createElement("H3");
+    var gridText = document.createTextNode(title);
+    // masterDiv.style.fontSize = "40px";
+    gridTitle.appendChild(gridText);
+    masterDiv.appendChild(gridTitle);
+    
+    $.getJSON(jsonFile, function(data) {
+
+      $.each(data, function(key, value){
+        createModal(value.name);
+        // Create a row every six items
+        if(key%6 == 0){
+          masterDiv.appendChild(rowDiv);
+          rowDiv = document.createElement("DIV");
+          rowDiv.setAttribute("class", "row");
+        }
+
+        var link = document.createElement("A");
+        link.href = "#";
+        link.setAttribute("data-toggle", "modal");
+        link.setAttribute("data-target", "#"+value.name);
+
+        var img = document.createElement("IMG");
+        img.src = "pictures/"+value.name+".png";
+        img.setAttribute("class", "img-responsive");
+        img.setAttribute("vspace", "5");
+        link.appendChild(img);
+
+        var newDiv = document.createElement("DIV");
+        newDiv.setAttribute("class", "col-md-2");
+        newDiv.appendChild(link);
+        rowDiv.appendChild(newDiv);
+      });
+    });
+
+    document.body.appendChild(masterDiv);    
+  }
+
+  /* Creation of the modals. Gets created when
+   * item is read by JSON loop.
+   */
+  function createModal(name){
+    var masterModal = document.createElement("DIV");
+    masterModal.setAttribute("class", "modal fade");
+    masterModal.setAttribute("id", name);
+    masterModal.setAttribute("role", "dialog");
+
+    var modalDialog = document.createElement("DIV");
+    modalDialog.setAttribute("class", "modal-dialog modal-lg");
+    masterModal.appendChild(modalDialog);
+ 
+    var modalContent = document.createElement("DIV");
+    modalContent.setAttribute("class", "modal-content");
+    modalDialog.appendChild(modalContent);
+  
+    var modalText = document.createElement("DIV");
+    modalText.setAttribute("w3-include-html", "text/"+name+".html");
+    modalContent.appendChild(modalText);
+   
+    var modalFooter = document.createElement("DIV");
+    modalFooter.setAttribute("class", "modal-footer");
+
+    var modalButton = document.createElement("BUTTON");
+    modalButton.setAttribute("data-dismiss","modal");
+    var text6 = document.createTextNode("Close");
+    modalButton.appendChild(text6);
+    modalFooter.appendChild(modalButton);
+
+    modalContent.appendChild(modalFooter);
+  
+    document.body.appendChild(masterModal); 
+    includeHTML();
+  }   
+
+
+
+
+
+</script>
+
+<br>
+<div class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h4>AOE2 Hub by Ycreak, 2018</h4>
+      </div>
+        
+      <div class="col-md-6">
+        <h4>Got any ideas? Please contact me via Reddit or Github!</h4>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<link rel="stylesheet" href="styles.css">
+
+
+</body>
+</html>

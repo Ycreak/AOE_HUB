@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://www.w3schools.com/lib/w3.js"></script>
+  <script src="js/jquery.js"></script> 
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="modals.css">
+  <link rel="shortcut icon" href="./pictures/Logo.png">
+
+  <!-- Has to stay on this position to be on top! -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+
+  <title>AOE2 Hub</title>
+  
+
+
+
+
+
+</head>
+
+
+<body>
+
+<script>
+
+  var counter = 1;
+
+
+  var rowDiv = document.createElement("DIV");
+  rowDiv.setAttribute("class", "row");
+
+
+  var masterDiv = document.createElement("DIV");
+  masterDiv.setAttribute("class", "container-fluid");
+  var text1 = document.createTextNode("Resize the browser window to see the effect.");
+  masterDiv.appendChild(text1);
+  
+  $.getJSON("mydata.json", function(data) {
+
+
+
+    $.each(data, function(key, value){
+      alert("Huidige JSON waarde: "+key);
+      if(key%6 == 0){
+        //var rowDiv = document.createElement("DIV");
+        // alert("Ik ga een nieuwe rowDiv maken!");
+        // document.removeChild(rowDiv);
+        masterDiv.appendChild(rowDiv);
+
+         // masterDiv.appendChild(rowDiv);
+
+        //alert(key%6);
+      }
+
+      
+      var x = document.createElement("IMG");
+      // alert("Allocatie nieuwe afbeelding!");
+      x.setAttribute("src", "pictures/"+value.name+".png");
+      x.setAttribute("class", "img-responsive");
+      // x.setAttribute("height", "100");
+
+      var newDiv = document.createElement("DIV");
+      // alert("Allocatie nieuwe DIV voor afbeelding!");
+      newDiv.setAttribute("class", "col-md-2");
+      newDiv.setAttribute("style", "background-color: pink;");
+      newDiv.appendChild(x);
+
+      // alert("Zien we dit?!");      
+      rowDiv.appendChild(newDiv);
+      // alert("newDiv toevoegen aan rowDiv!");      
+
+
+     });
+      
+    
+
+    });
+
+    document.body.appendChild(masterDiv);    
+
+
+
+
+</script>
+
+<div class="container-fluid">
+  <h1>Hello World!</h1>
+  <p>Resize the browser window to see the effect.</p>
+  <p>The columns will automatically stack on top of each other when the screen is less than 768px wide.</p>
+  <div class="row">
+    <div class="col-sm-4" style="background-color:lavender;">.col-sm-4</div>
+    <div class="col-sm-4" style="background-color:lavenderblush;">.col-sm-4</div>
+    <div class="col-sm-4" style="background-color:lavender;">.col-sm-4</div>
+  </div>
+</div>
+
+</body>
+</html>
+
+
+<div class="row"> 
+  <div class="column">
+    <img src="wedding.jpg">
+    <img src="rocks.jpg">
+    <img src="falls2.jpg">
+    <img src="paris.jpg">
+    <img src="nature.jpg">
+    <img src="mist.jpg">
+    <img src="paris.jpg">
+  </div>
+  <div class="column">
+    <img src="underwater.jpg">
+    <img src="ocean.jpg">
+    <img src="wedding.jpg">
+    <img src="mountainskies.jpg">
+    <img src="rocks.jpg">
+    <img src="underwater.jpg">
+  </div> 
+  <div class="column">
+    <img src="wedding.jpg">
+    <img src="rocks.jpg">
+    <img src="falls2.jpg">
+    <img src="paris.jpg">
+    <img src="nature.jpg">
+    <img src="mist.jpg">
+    <img src="paris.jpg">
+  </div>
+  <div class="column">
+    <img src="underwater.jpg">
+    <img src="ocean.jpg">
+    <img src="wedding.jpg">
+    <img src="mountainskies.jpg">
+    <img src="rocks.jpg">
+    <img src="underwater.jpg">
+  </div>
+</div>

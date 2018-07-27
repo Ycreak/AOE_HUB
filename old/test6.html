@@ -1,0 +1,36 @@
+<html>
+<head>
+    <title>Add Text to DIV using jQuery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <style>
+        .divText {
+            padding:2px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <p>Click the button to add text to a DIV!</p>
+
+    <div id="myProfile">
+        <input type="button" id="btAdd" value="Add Text" style="margin:10px 0;" />
+    </div> 
+</body>
+
+<script>
+    $(document).ready(function () {
+        $('#btAdd').click(function () {
+            AddText();
+        });
+
+        function AddText() {
+            var rndValue;
+            // GENERATE A RANDOM NUMBER (BETWEEN 1 AND 50) FOR EVERY BUTTON CLICK.
+            rndValue = Math.floor((Math.random() * 50));
+
+            // NOW ADD THE VALUE (RANDOM NUMBER) TO THE DIV ELEMENT.
+            $('<div class=divText>' + rndValue + '</div>').appendTo('#myProfile');
+        }
+    });
+</script>
+</html>

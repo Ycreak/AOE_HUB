@@ -1,0 +1,16 @@
+<body>
+	Hello!
+<script>
+$.getJSON("mydata.json", function(data) {
+        var html = '';
+				document.write('Hello again!');
+        $.each(data, function(key, value){
+            html += '<div class="dcell">';
+            html += '<input type="text" id="'+value.product+'" name="'+value.product+'" value="0" stock="'+value.stock+'" price="'+value.price+'" required>';
+            html += '</div>';
+        });
+    $('mama').html(html);
+		document.write(mama);
+    });
+</script>
+</body>

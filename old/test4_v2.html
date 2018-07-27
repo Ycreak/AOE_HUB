@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://www.w3schools.com/lib/w3.js"></script>
+  <script src="js/jquery.js"></script> 
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="modals.css">
+  <link rel="shortcut icon" href="./pictures/Logo.png">
+
+  <link rel="import" href="test2.html">
+
+
+  <!-- Has to stay on this position to be on top! -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+
+  <title>AOE2 Hub</title>
+  
+  <script type="text/javascript">
+
+  jQuery.get('test.txt', function(data) {
+    alert(data);
+  });
+
+    function createModal(name){
+      var string = '';
+
+      string += '<div class="modal fade" id="'+name+'" role="dialog"><div class="modal-dialog modal-lg">';
+      string += '<div class="modal-content"><div class="modal-body">';
+      string += '<div w3-include-html="test2.html">';
+      string += '<p> Hello Everyone! </p></div>';
+      string += '</div><div class="modal-footer">';
+      string += '<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>';
+      string += '</div></div></div></div>';
+      $('#modalCreator').html(string);
+    }
+
+    $.getJSON("mydata.json", function(data) {
+      var html = '';
+      var counter = 1;
+      $.each(data, function(key, value){
+      if(counter == 1) html += '<div class="container">';
+      html += '<div class="col-md-2">'; 
+      html += '<a href="#'+value.name+'" onclick="createModal(\'' + value.name + '\')" data-toggle="modal" data-target="#'+value.name+'"><img src="pictures/'+value.name+'.png" class="img-responsive"></a>';
+      html += '</div>';
+      if(counter == 6) html += '</div><br>';
+      counter++;
+      if(counter == 7) counter = 1; 
+    });
+    $('#divCreator').html(html);
+    });
+  </script>
+
+</head>
+
+<body>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-12 text-center">
+      <h1><b>AGE OF EMPIRES 2 HUB</b></h1>
+      <h3><b>Everything AOE2 related in one place</b></h3>
+      <br><br>
+    </div>
+    <p id="divCreator"></p>
+    <p id="modalCreator"></p>
+
+
+  </div>
+</div>
+
+
+
+<!-- <p id="demo"></p>
+
+<script>
+function myFunction() {
+  document.getElementById("demo").innerHTML = "Hello World";
+}
+</script> -->
+  
+  <footer class="text-center">
+    <div class="footer-below">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">Copyright © [AoEU4]Ycreak 2017</div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>w3.includeHTML();</script>
+
+
+
+                        
+
+
+</body>
+</html>
