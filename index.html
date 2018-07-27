@@ -1,673 +1,198 @@
-<html><head>
-	
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-110078494-1"></script>
-	<script>  	window.dataLayer = window.dataLayer || [];
-    			function gtag(){dataLayer.push(arguments);}
-      			gtag('js', new Date());
-        		gtag('config', 'UA-110078494-1');
-	</script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://www.w3schools.com/lib/w3.js"></script>
 
-	<meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="">
-        <meta name="author" content="">
-        <title>AOE Navigation</title>
-        <script src="https://www.w3schools.com/lib/w3.js"></script>
-        <script type="text/javascript" src="hits.php"></script>
-	    <link rel="shortcut icon" href="./pictures/Logo.png">
-        <!-- Bootstrap Core CSS - Uses Bootswatch Flatly
-        Theme: http://bootswatch.com/flatly/ -->
-        <link href="css/bootstrap.min.css" rel="stylesheet">
-        <!-- Custom CSS -->
-        <link href="css/freelancer.css" rel="stylesheet">
-        <!-- Custom Fonts -->
-        <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-        <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-        <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media
-        queries -->
-        <!-- WARNING: Respond.js doesn't work if you view the page via file://
-        -->
-        <!--[if lt IE 9]>
-            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-        <![endif]-->
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-110078494-1"></script>
+  <script>    window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-110078494-1');
+  </script>
 
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-  <style>
-  .carousel-inner > .item > img,
-  .carousel-inner > .item > a > img {
-      width: 70%;
-      margin: auto;
+  <link rel="stylesheet" href="styles.css">
+  <!-- <link rel="stylesheet" href="modals.css"> -->
+  <link rel="shortcut icon" href="./pictures/Logo.png">
+
+  <!-- Has to stay on this position to be on top! -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+
+  <title>AOE2 Hub</title>
+
+
+  
+</head>
+
+
+<body>
+
+<script>
+  createTitle();
+  createGrid("json/general.json", "");
+  createGrid("json/websites.json", "Great AOE2 Websites, Tools and Reading Material");
+  createGrid("json/casters.json", "Casters & Content Creators");
+  createGrid("json/projects.json", "Ongoing Projects");
+
+  function includeHTML() {
+    var z, i, elmnt, file, xhttp;
+    /*loop through a collection of all HTML elements:*/
+    z = document.getElementsByTagName("*");
+    for (i = 0; i < z.length; i++) {
+      elmnt = z[i];
+      /*search for elements with a certain atrribute:*/
+      file = elmnt.getAttribute("w3-include-html");
+      if (file) {
+        /*make an HTTP request using the attribute value as the file name:*/
+        xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+          if (this.readyState == 4) {
+            if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+            if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+            /*remove the attribute, and call this function once more:*/
+            elmnt.removeAttribute("w3-include-html");
+            includeHTML();
+          }
+        }      
+        xhttp.open("GET", file, true);
+        xhttp.send();
+        /*exit the function:*/
+        return;
+      }
+    }
+  };
+
+  function createTitle(){
+    var titleDiv = document.createElement("DIV");
+    titleDiv.setAttribute("class", "container-fluid");
+    var title = document.createElement("H1");
+    var text1 = document.createTextNode("AOE2 HUB");
+
+    var subTitle = document.createElement("H2");
+    var text2 = document.createTextNode("Everything AOE2 related in one place!");
+
+    title.appendChild(text1);
+    subTitle.appendChild(text2);
+    titleDiv.appendChild(title);
+    titleDiv.appendChild(subTitle);  
+
+    document.body.appendChild(titleDiv);    
+
   }
-  </style>
 
-    </head>
-    <body id="page-top" class="index">
-        <!-- Portfolio Grid Section -->
-        <section id="portfolio">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12 text-center">
-                        <h2><b>AGE OF EMPIRES 2 HUB</b></h2>
-                        <h3><b>Everything AOE2 related in one place</b></h3>
-                    </div>
-                </div> <br> <br>
-                
-                <div class="row">
-                    <div class="col-sm-4 portfolio-item">
-                        <a href="#aocZone" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="pictures/aocZone.png" class="img-responsive" alt="">
-                    </a>
-                    </div>
-                    <div class="col-sm-4 portfolio-item">
-                        <a href="#reddit" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="pictures/reddit.png" class="img-responsive" alt="">
-                    </a>
-                    </div>
-                    <div class="col-sm-4 portfolio-item">
-                        <a href="#voobly" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="pictures/voobly.png" class="img-responsive" alt="">
-                    </a>
-                    </div>
-                </div>
+  /* Creation of the picture grid using mydata.json
+   * Uses a container-fluid with rows consisting of
+   * six pictures, made of the a element for links.
+   */
+  function createGrid(jsonFile, title){
 
-								<div class="row">
-                    <div class="col-sm-2 portfolio-item">
-                        <a href="#escape" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="pictures/escape.png" class="img-responsive" alt="">
-                    </a>
-                    </div>
-                    <div class="col-sm-2 portfolio-item">
-                        <a href="#aoe2HDinfo" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="pictures/aoe2HDinfo.png" class="img-responsive" alt="">
-                    </a>
-                    </div>
-                    <div class="col-sm-2 portfolio-item">
-                        <a href="#aokHeaven" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="pictures/aokH.png" class="img-responsive" alt="">
-                    </a>
-                    </div>
-                    <div class="col-sm-2 portfolio-item">
-                        <a href="#macOS" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="pictures/macOS2.png" class="img-responsive" alt="">
-                    </a>
-                    </div>
-                    <div class="col-sm-2 portfolio-item">
-                        <a href="#linux" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="pictures/linux.png" class="img-responsive" alt="">
-                    </a>
-                    </div>
-                    <div class="col-sm-2 portfolio-item">
-                        <a href="#calendar" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="pictures/calendar.png" class="img-responsive" alt="">
-                    </a>
-                    </div>
+    var rowDiv = document.createElement("DIV");
+    rowDiv.setAttribute("class", "row");
 
-                <div class="row">
-                    <div class="col-sm-2 portfolio-item">
-                        <a href="#twitch" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="pictures/twitch.png" class="img-responsive" alt="">
-                    </a>
-                    </div>
-                    <div class="col-sm-2 portfolio-item">
-                        <a href="#getStarted" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="pictures/started.png" class="img-responsive" alt="">
-                    </a>
-                    </div>
-                    <div class="col-sm-2 portfolio-item">
-                        <a href="#youtube" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="pictures/youtube.png" class="img-responsive" alt="">
-                    </a>
-                    </div>
-                    <div class="col-sm-2 portfolio-item">
-                        <a href="#hotkeys" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="pictures/hotkey.png" class="img-responsive" alt="">
-                    </a>
-                    </div>
-                    <div class="col-sm-2 portfolio-item">
-                        <a href="#aoe2net" class="portfolio-link" data-toggle="modal">
-                        <div class="caption"><div class="caption-content"><i class="fa fa-search-plus fa-3x"></i></div></div>
-                        <img src="pictures/aoe2net.png" class="img-responsive" alt="">
-                    </a>
-                    </div>
-                    <div class="col-sm-2 portfolio-item">
-                        <a href="#placeholder" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="pictures/aiscripters.png" class="img-responsive" alt="">
-                    </a>
-                    </div>
-
-                <div class="row">
-                    <div class="col-sm-2 portfolio-item">
-                        <a href="#youtube" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="pictures/forgottenempires.png" class="img-responsive" alt="">
-                    </a>
-                    </div>
-                    <div class="col-sm-2 portfolio-item">
-                        <a href="#placeholder" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="pictures/thebattler.png" class="img-responsive" alt="">
-                    </a>
-                    </div>
-                    <div class="col-sm-2 portfolio-item">
-                        <a href="#placeholder" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="pictures/majike03.png" class="img-responsive" alt="">
-                    </a>
-                    </div>
-                    <div class="col-sm-2 portfolio-item">
-                        <a href="#placeholder" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="pictures/officialwebsite.png" class="img-responsive" alt="">
-                    </a>
-                    </div>
-                    <div class="col-sm-2 portfolio-item">
-                        <a href="#placeholder" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="pictures/aoe2stats.png" class="img-responsive" alt="">
-                    </a>
-                    </div>
-                    <div class="col-sm-2 portfolio-item">
-                        <a href="#placeholder" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="pictures/aoewiki.png" class="img-responsive" alt="">
-                    </a>
-                    </div>
-
-								<div class="row">
-                    <div class="col-sm-2 portfolio-item">
-                        <a href="#placeholder" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="pictures/ageofnotes.png" class="img-responsive" alt="">
-                    </a>
-                    </div>
-                    <div class="col-sm-2 portfolio-item">
-                        <a href="#placeholder" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="pictures/placeholder.png" class="img-responsive" alt="">
-                    </a>
-                    </div>
-                    <div class="col-sm-2 portfolio-item">
-                        <a href="#placeholder" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="pictures/placeholder.png" class="img-responsive" alt="">
-                    </a>
-                    </div>
-                    <div class="col-sm-2 portfolio-item">
-                        <a href="#placeholder" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="pictures/placeholder.png" class="img-responsive" alt="">
-                    </a>
-                    </div>
-                    <div class="col-sm-2 portfolio-item">
-                        <a href="#placeholder" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="pictures/placeholder.png" class="img-responsive" alt="">
-                    </a>
-                    </div>
-                    <div class="col-sm-2 portfolio-item">
-                        <a href="#placeholder" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="pictures/placeholder.png" class="img-responsive" alt="">
-                    </a>
-                    </div>
-
-
-                </div>
-                <div class="row">
-                    <div class="col-sm-4 portfolio-item">
-                        <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="pictures/placeholder.png" class="img-responsive" alt="">
-                    </a>
-                    </div>
-                    <div class="col-sm-4 portfolio-item">
-                        <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="pictures/placeholder.png" class="img-responsive" alt="">
-                    </a>
-                    </div>
-                    <div class="col-sm-4 portfolio-item">
-                        <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="pictures/placeholder.png" class="img-responsive" alt="">
-                    </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Casters Section -->
-        <section id="portfolio">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12 text-center">
-                        <h2><b>AOE Casters</b></h2> <br> <br>
-                    </div>
-                </div>
-                
-                <div class="row">
-                    <div class="col-sm-2 portfolio-item">
-                        <a href="#resonance22" class="portfolio-link" data-toggle="modal">
-                        <div class="caption"><div class="caption-content"><i class="fa fa-search-plus fa-3x"></i></div></div>
-                        <img src="pictures/resonance.png" class="img-responsive" alt="">
-                    </a>
-                    </div>
-                    <div class="col-sm-2 portfolio-item">
-                        <a href="#placeholder" class="portfolio-link" data-toggle="modal">
-                        <div class="caption"><div class="caption-content"><i class="fa fa-search-plus fa-3x"></i></div></div>
-                        <img src="pictures/zero.png" class="img-responsive" alt="">
-                    </a>
-                    </div>
-                    <div class="col-sm-2 portfolio-item">
-                        <a href="#placeholder" class="portfolio-link" data-toggle="modal">
-                        <div class="caption"><div class="caption-content"><i class="fa fa-search-plus fa-3x"></i></div></div>
-                        <img src="pictures/t90.png" class="img-responsive" alt="">
-                    </a>
-                    </div>
-                    <div class="col-sm-2 portfolio-item">
-                        <a href="#placeholder" class="portfolio-link" data-toggle="modal">
-                        <div class="caption"><div class="caption-content"><i class="fa fa-search-plus fa-3x"></i></div></div>
-                        <img src="pictures/memb.png" class="img-responsive" alt="">
-                    </a>
-                    </div>
-                    <div class="col-sm-2 portfolio-item">
-                        <a href="#placeholder" class="portfolio-link" data-toggle="modal">
-                        <div class="caption"><div class="caption-content"><i class="fa fa-search-plus fa-3x"></i></div></div>
-                        <img src="pictures/sotl.png" class="img-responsive" alt="">
-                    </a>
-                    </div>
-                    <div class="col-sm-2 portfolio-item">
-                        <a href="#placeholder" class="portfolio-link" data-toggle="modal">
-                        <div class="caption"><div class="caption-content"><i class="fa fa-search-plus fa-3x"></i></div></div>
-                        <img src="pictures/bbq.png" class="img-responsive" alt="">
-                    </a>
-                    </div>
-               </div> 
-		                  <br><br>
-		      <div class="row">
-                    <div class="col-sm-1 portfolio-item">
-                        <a href="#placeholder" class="portfolio-link" data-toggle="modal">
-                        <div class="caption"><div class="caption-content"><i class="fa fa-search-plus fa-2x"></i></div></div>
-                        <img src="pictures/klavskis.png" class="img-responsive" alt="">
-                    </a>
-                    </div>
-                    <div class="col-sm-1 portfolio-item">
-                        <a href="#placeholder" class="portfolio-link" data-toggle="modal">
-                        <div class="caption"><div class="caption-content"><i class="fa fa-search-plus fa-2x"></i></div></div>
-                        <img src="pictures/zero.png" class="img-responsive" alt="">
-                    </a>
-                    </div>
-                    <div class="col-sm-1 portfolio-item">
-                        <a href="#placeholder" class="portfolio-link" data-toggle="modal">
-                        <div class="caption"><div class="caption-content"><i class="fa fa-search-plus fa-2x"></i></div></div>
-                        <img src="pictures/t90.png" class="img-responsive" alt="">
-                    </a>
-                    </div>
-                    <div class="col-sm-1 portfolio-item">
-                        <a href="#placeholder" class="portfolio-link" data-toggle="modal">
-                        <div class="caption"><div class="caption-content"><i class="fa fa-search-plus fa-2x"></i></div></div>
-                        <img src="pictures/memb.png" class="img-responsive" alt="">
-                    </a>
-                    </div>
-                    <div class="col-sm-1 portfolio-item">
-                        <a href="#placeholder" class="portfolio-link" data-toggle="modal">
-                        <div class="caption"><div class="caption-content"><i class="fa fa-search-plus fa-2x"></i></div></div>
-                        <img src="pictures/sotl.png" class="img-responsive" alt="">
-                    </a>
-                    </div>
-                    <div class="col-sm-1 portfolio-item">
-                        <a href="#placeholder" class="portfolio-link" data-toggle="modal">
-                        <div class="caption"><div class="caption-content"><i class="fa fa-search-plus fa-2x"></i></div></div>
-                        <img src="pictures/bbq.png" class="img-responsive" alt="">
-                    </a>
-                    </div>
-                    <div class="col-sm-1 portfolio-item">
-                        <a href="#placeholder" class="portfolio-link" data-toggle="modal">
-                        <div class="caption"><div class="caption-content"><i class="fa fa-search-plus fa-2x"></i></div></div>
-                        <img src="pictures/placeholder.png" class="img-responsive" alt="">
-                    </a>
-                    </div>
-                    <div class="col-sm-1 portfolio-item">
-                        <a href="#placeholder" class="portfolio-link" data-toggle="modal">
-                        <div class="caption"><div class="caption-content"><i class="fa fa-search-plus fa-2x"></i></div></div>
-                        <img src="pictures/zero.png" class="img-responsive" alt="">
-                    </a>
-                    </div>
-                    <div class="col-sm-1 portfolio-item">
-                        <a href="#placeholder" class="portfolio-link" data-toggle="modal">
-                        <div class="caption"><div class="caption-content"><i class="fa fa-search-plus fa-2x"></i></div></div>
-                        <img src="pictures/t90.png" class="img-responsive" alt="">
-                    </a>
-                    </div>
-                    <div class="col-sm-1 portfolio-item">
-                        <a href="#placeholder" class="portfolio-link" data-toggle="modal">
-                        <div class="caption"><div class="caption-content"><i class="fa fa-search-plus fa-2x"></i></div></div>
-                        <img src="pictures/memb.png" class="img-responsive" alt="">
-                    </a>
-                    </div>
-                    <div class="col-sm-1 portfolio-item">
-                        <a href="#placeholder" class="portfolio-link" data-toggle="modal">
-                        <div class="caption"><div class="caption-content"><i class="fa fa-search-plus fa-2x"></i></div></div>
-                        <img src="pictures/sotl.png" class="img-responsive" alt="">
-                    </a>
-                    </div>
-                    <div class="col-sm-1 portfolio-item">
-                        <a href="#placeholder" class="portfolio-link" data-toggle="modal">
-                        <div class="caption"><div class="caption-content"><i class="fa fa-search-plus fa-2x"></i></div></div>
-                        <img src="pictures/bbq.png" class="img-responsive" alt="">
-                    </a>
-                    </div>
-		</div>
-	</section>
-
-        <!-- Experts Section -->
-        <section id="portfolio">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12 text-center">
-                        <h2><b>AOE Experts</b></h2> <br> <br>
-                    </div>
-                </div>
-                
-                <div class="row">
-                    <div class="col-sm-2 portfolio-item">
-                        <a href="#placeholder" class="portfolio-link" data-toggle="modal">
-                        <div class="caption"><div class="caption-content"><i class="fa fa-search-plus fa-3x"></i></div></div>
-                        <img src="pictures/viper.png" class="img-responsive" alt="">
-                    </a>
-                    </div>
-                    <div class="col-sm-2 portfolio-item">
-                        <a href="#placeholder" class="portfolio-link" data-toggle="modal">
-                        <div class="caption"><div class="caption-content"><i class="fa fa-search-plus fa-3x"></i></div></div>
-                        <img src="pictures/daut.png" class="img-responsive" alt="">
-                    </a>
-                    </div>
-                    <div class="col-sm-2 portfolio-item">
-                        <a href="#placeholder" class="portfolio-link" data-toggle="modal">
-                        <div class="caption"><div class="caption-content"><i class="fa fa-search-plus fa-3x"></i></div></div>
-                        <img src="pictures/jordan23.png" class="img-responsive" alt="">
-                    </a>
-                    </div>
-                    <div class="col-sm-2 portfolio-item">
-                        <a href="#placeholder" class="portfolio-link" data-toggle="modal">
-                        <div class="caption"><div class="caption-content"><i class="fa fa-search-plus fa-3x"></i></div></div>
-                        <img src="pictures/nili.png" class="img-responsive" alt="">
-                    </a>
-                    </div>
-                    <div class="col-sm-2 portfolio-item">
-                        <a href="#placeholder" class="portfolio-link" data-toggle="modal">
-                        <div class="caption"><div class="caption-content"><i class="fa fa-search-plus fa-3x"></i></div></div>
-                        <img src="pictures/placeholder.png" class="img-responsive" alt="">
-                    </a>
-                    </div>
-                    <div class="col-sm-2 portfolio-item">
-                        <a href="#placeholder" class="portfolio-link" data-toggle="modal">
-                        <div class="caption"><div class="caption-content"><i class="fa fa-search-plus fa-3x"></i></div></div>
-                        <img src="pictures/placeholder.png" class="img-responsive" alt="">
-                    </a>
-                    </div>
-	</section>
-
-        <!-- Project Section -->
-        <section id="portfolio">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12 text-center">
-                        <h2> <b> AOE Projects </b> </h2> <br> <br>
-                    </div>
-                </div>
-                
-                <div class="row">
-                    <div class="col-sm-2 portfolio-item">
-                        <a href="#translate" class="portfolio-link" data-toggle="modal">
-                        <div class="caption"><div class="caption-content"><i class="fa fa-search-plus fa-3x"></i></div></div>
-                        <img src="pictures/translate.png" class="img-responsive" alt="">
-                    </a>
-                    </div>
-                    <div class="col-sm-2 portfolio-item">
-                        <a href="#wololo" class="portfolio-link" data-toggle="modal">
-                        <div class="caption"><div class="caption-content"><i class="fa fa-search-plus fa-3x"></i></div></div>
-                        <img src="pictures/wololo.png" class="img-responsive" alt="">
-                    </a>
-                    </div>
-                    <div class="col-sm-2 portfolio-item">
-                        <a href="#placeholder" class="portfolio-link" data-toggle="modal">
-                        <div class="caption"><div class="caption-content"><i class="fa fa-search-plus fa-3x"></i></div></div>
-                        <img src="pictures/userpatch.png" class="img-responsive" alt="">
-                    </a>
-                    </div>
-                    <div class="col-sm-2 portfolio-item">
-                        <a href="#placeholder" class="portfolio-link" data-toggle="modal">
-                        <div class="caption"><div class="caption-content"><i class="fa fa-search-plus fa-3x"></i></div></div>
-                        <img src="pictures/compat.png" class="img-responsive" alt="">
-                    </a>
-                    </div>
-                    <div class="col-sm-2 portfolio-item">
-                        <a href="#placeholder" class="portfolio-link" data-toggle="modal">
-                        <div class="caption"><div class="caption-content"><i class="fa fa-search-plus fa-3x"></i></div></div>
-                        <img src="pictures/placeholder.png" class="img-responsive" alt="">
-                    </a>
-                    </div>
-                    <div class="col-sm-2 portfolio-item">
-                        <a href="#placeholder" class="portfolio-link" data-toggle="modal">
-                        <div class="caption"><div class="caption-content"><i class="fa fa-search-plus fa-3x"></i></div></div>
-                        <img src="pictures/openage.png" class="img-responsive" alt="">
-                    </a>
-                    </div>
-	</section>
-
-<!-- Footer -->
-        <footer class="text-center">
-
-            <div class="footer-below">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-12">Copyright © [AoEU4]Ycreak 2017</div>
-                    </div>
-                </div>
-            </div>
-        </footer>
-        <!-- Scroll to Top Button (Only visible on small and extra-small screen
-        sizes) -->
-        <div class="scroll-top page-scroll visible-xs visible-sm">
-            <a class="btn btn-primary" href="#page-top">
-            <i class="fa fa-chevron-up"></i>
-        </a>
-        </div>
-
-        <div w3-include-html="./modals/placeholder.html"></div>
-        <!-- AOE Sidebar -->
-        <div w3-include-html="./modals/aoczone.html"></div>
-        <div w3-include-html="./modals/reddit.html"></div>
-        <div w3-include-html="./modals/voobly.html"></div>
-        <div w3-include-html="./modals/escape.html"></div>
-        <div w3-include-html="./modals/aoe2HDinfo.html"></div>
-        <div w3-include-html="./modals/aokHeaven.html"></div>
-        <div w3-include-html="./modals/macOS.html"></div>
-        <div w3-include-html="./modals/linux.html"></div>
-        <div w3-include-html="./modals/calendar.html"></div>
-        <div w3-include-html="./modals/twitch.html"></div>
-        <div w3-include-html="./modals/getStarted.html"></div>
-        <div w3-include-html="./modals/youtube.html"></div>
-        <div w3-include-html="./modals/hotkeys.html"></div>
-        <div w3-include-html="./modals/aoe2net.html"></div>
-        <!-- <div w3-include-html="./modals/macOS.html"></div> -->
-
-        <!-- AOE Projects -->
-        <div w3-include-html="./modals/wololo.html"></div>
-        <div w3-include-html="./modals/translate.html"></div>
-        <div w3-include-html="./modals/voobly.html"></div>
-        <div w3-include-html="./modals/escape.html"></div>
-        <div w3-include-html="./modals/aoe2HDinfo.html"></div>
-        <div w3-include-html="./modals/aokHeaven.html"></div>
-
-        <!-- AOE Casters -->
-        <div w3-include-html="./modals/resonance22.html"></div>
-        <div w3-include-html="./modals/reddit.html"></div>
-        <div w3-include-html="./modals/voobly.html"></div>
-        <div w3-include-html="./modals/escape.html"></div>
-        <div w3-include-html="./modals/aoe2HDinfo.html"></div>
-        <div w3-include-html="./modals/aokHeaven.html"></div>
-
-        <!-- AOE Experts -->
-        <div w3-include-html="./modals/theviper.html"></div>
-        <div w3-include-html="./modals/reddit.html"></div>
-        <div w3-include-html="./modals/voobly.html"></div>
-        <div w3-include-html="./modals/nili.html"></div>
-        <div w3-include-html="./modals/aoe2HDinfo.html"></div>
-        <div w3-include-html="./modals/aokHeaven.html"></div>
-
-
-        <!-- jQuery -->
-        <script src="js/jquery.js"></script>
-        <!-- Bootstrap Core JavaScript -->
-        <script src="js/bootstrap.min.js"></script>
-        <!-- Plugin JavaScript -->
-        <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-        <script src="js/classie.js"></script>
-        <script src="js/cbpAnimatedHeader.js"></script>
-        <!-- Contact Form JavaScript -->
-        <script src="js/jqBootstrapValidation.js"></script>
-        <script src="js/contact_me.js"></script>
-        <!-- Custom Theme JavaScript -->
-        <script src="js/freelancer.js"></script>
-        <script>w3.includeHTML();</script>
+    var masterDiv = document.createElement("DIV");
+    masterDiv.setAttribute("class", "container-fluid");
     
+    var gridTitle = document.createElement("H3");
+    var gridText = document.createTextNode(title);
+    // masterDiv.style.fontSize = "40px";
+    gridTitle.appendChild(gridText);
+    masterDiv.appendChild(gridTitle);
+    
+    $.getJSON(jsonFile, function(data) {
 
-</body></html>
+      $.each(data, function(key, value){
+        createModal(value.name);
+        // Create a row every six items
+        if(key%6 == 0){
+          masterDiv.appendChild(rowDiv);
+          rowDiv = document.createElement("DIV");
+          rowDiv.setAttribute("class", "row");
+        }
+
+        var link = document.createElement("A");
+        link.href = "#";
+        link.setAttribute("data-toggle", "modal");
+        link.setAttribute("data-target", "#"+value.name);
+        // link.setAttribute("data-keyboard","true");
+        // TODO: Close Modal with ESC
+
+        var img = document.createElement("IMG");
+        img.src = "pictures/"+value.name+".png";
+        img.setAttribute("class", "img-responsive");
+        img.setAttribute("vspace", "5");
+        link.appendChild(img);
+
+        var newDiv = document.createElement("DIV");
+        newDiv.setAttribute("class", "col-md-2");
+        newDiv.appendChild(link);
+        rowDiv.appendChild(newDiv);
+      });
+    });
+
+    document.body.appendChild(masterDiv);    
+  }
+
+  /* Creation of the modals. Gets created when
+   * item is read by JSON loop.
+   */
+  function createModal(name){
+    var masterModal = document.createElement("DIV");
+    masterModal.setAttribute("class", "modal fade");
+    masterModal.setAttribute("id", name);
+    masterModal.setAttribute("role", "dialog");
+
+    var modalDialog = document.createElement("DIV");
+    modalDialog.setAttribute("class", "modal-dialog modal-lg");
+    masterModal.appendChild(modalDialog);
+ 
+    var modalContent = document.createElement("DIV");
+    modalContent.setAttribute("class", "modal-content");
+    modalDialog.appendChild(modalContent);
+  
+    var modalText = document.createElement("DIV");
+    modalText.setAttribute("w3-include-html", "modal/"+name+".html");
+    modalContent.appendChild(modalText);
+   
+    var modalFooter = document.createElement("DIV");
+    modalFooter.setAttribute("class", "modal-footer");
+
+    var modalButton = document.createElement("BUTTON");
+    modalButton.setAttribute("data-dismiss","modal");
+    var text6 = document.createTextNode("Close");
+    modalButton.appendChild(text6);
+    modalFooter.appendChild(modalButton);
+
+    modalContent.appendChild(modalFooter);
+  
+    document.body.appendChild(masterModal); 
+    includeHTML();
+  }   
+
+</script>
+
+<br>
+<div class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h4>AOE2 Hub by Ycreak, 2018</h4>
+      </div>
+        
+      <div class="col-md-6">
+        <h4>Got any ideas? Please contact me via Reddit or Github!</h4>
+      </div>
+    </div>
+  </div>
+</div>
+
+<link rel="stylesheet" href="css/styles.css">
+
+
+</body>
+</html>
